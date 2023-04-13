@@ -9,12 +9,12 @@ public class PlayerControls : MonoBehaviour
     //PARAMETERS
     [SerializeField] InputAction movement;
     [SerializeField] float movementSpeed = 15f;
-    [SerializeField] float xRange = 15f;
-    [SerializeField] float yRange = 15f;
+    [SerializeField] float xRange = 13f;
+    [SerializeField] float yRange = 8f;
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float positionYawFactor = 2f;
-    [SerializeField] float controlRollFactor = -20f;
+    [SerializeField] float controlRollFactor = -15f;
 
     //CACHE - references for readability or speed
     //STATE - private instance (member) variables

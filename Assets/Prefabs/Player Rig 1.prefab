@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4724286168948500718}
-  m_LocalRotation: {x: 0.05547298, y: 0, z: 0, w: 0.99846023}
-  m_LocalPosition: {x: 0, y: 3.5, z: -18.33}
+  m_LocalRotation: {x: 0.052335896, y: 0, z: 0, w: 0.9986295}
+  m_LocalPosition: {x: 0, y: 2, z: -18.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4724286170211758763}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.36, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6, y: 0, z: 0}
 --- !u!20 &4724286168948500716
 Camera:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -151,18 +151,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -202,91 +190,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1261432639830049785, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_Name
+      value: Left Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261432639830049786, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261432639830049786, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261432639830049786, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261432639830049787, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817428711774899633, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_Name
+      value: Right Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817428711774899634, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817428711774899634, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817428711774899634, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817428711774899635, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
---- !u!1 &580543585166993367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1989617196241040, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
-  m_PrefabInstance: {fileID: 579153298452002631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &578283595965584717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
   m_PrefabInstance: {fileID: 579153298452002631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &579153299291919814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580543585166993367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1fb869d84c79742b7031cad21a38ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6c804345-6a08-4f2f-842a-ef437c6bddeb
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: a37e45c4-c923-4372-a00f-d0688c03acf7
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: up
-      m_Id: b8690272-cc6a-4670-8b2f-e3ca32cc732a
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 45d18939-6f4a-47c0-9562-d277a2e4c5b2
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 423a8463-5e40-4933-8b4f-4fe109807b38
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 4295ccae-473c-4dae-b176-5db3d41cfcdf
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: 
-      m_Id: ffba19af-13ac-4d7e-8f8f-89bc79915689
-      m_Path: <Gamepad>/leftStick
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 0
-    m_Flags: 0
-  movementSpeed: 50
-  xRange: 13
-  yRange: 8
-  positionPitchFactor: -2
-  controlPitchFactor: -15
-  positionYawFactor: 2
-  controlRollFactor: -15
