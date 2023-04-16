@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
 {
     //PARAMETERS
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction fire;
     [SerializeField] float movementSpeed = 15f;
     [SerializeField] float xRange = 13f;
     [SerializeField] float yRange = 8f;
@@ -22,10 +23,6 @@ public class PlayerControls : MonoBehaviour
 
 
     //PUBLIC METHOD    
-    void Start()
-    {
-
-    }
     void FixedUpdate()
     {
         InputHandler();
@@ -38,9 +35,21 @@ public class PlayerControls : MonoBehaviour
 
         MovePlayerShip(horizontalThrow, verticalThrow);
         RotatePlayerShip(horizontalThrow, verticalThrow);
-
+        ProcessShooting();
         //horizontalThrow = Input.GetAxis("Horizontal");
         //verticalThrow = Input.GetAxis("Vertical");
+    }
+
+    private void ProcessShooting()
+    {
+        if (fire.ReadValue<float>() > 0.5)
+        {
+            Debug.Log("Shooting");
+        }
+        else
+        {
+            Debug.Log("Stop Shooting");
+        }
     }
 
     private void RotatePlayerShip(float horizontalThrow, float verticalThrow)
@@ -76,9 +85,11 @@ public class PlayerControls : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
+        fire.Enable();
     }
     private void OnDisable()
     {
         movement.Disable();
+        fire.Disable();
     }
 }
