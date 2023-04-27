@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4724286168948500718}
   m_LocalRotation: {x: 0.052335896, y: 0, z: 0, w: 0.9986295}
-  m_LocalPosition: {x: 0, y: 2, z: -18.18}
+  m_LocalPosition: {x: 0, y: 2, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4724286170211758763}
@@ -190,10 +190,151 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: xRange
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_Id
+      value: 8752d357-0553-461d-b44a-b58d1a18af1e
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 3391233227559853452}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1839740884229804996}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
+      value: cb4e6494-2bdc-458d-86ca-064319079843
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonSouth
+      objectReference: {fileID: 0}
+    - target: {fileID: 579153299291919814, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Fire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+--- !u!1 &580543585063534765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1989617196241040, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+  m_PrefabInstance: {fileID: 579153298681008189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &578283595784548919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478339252019722, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
   m_PrefabInstance: {fileID: 579153298681008189}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3391233227559853452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2817428711774899633, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+  m_PrefabInstance: {fileID: 579153298681008189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1839740884229804996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1261432639830049785, guid: 821cb84404cdb734481db5d7b905b37a, type: 3}
+  m_PrefabInstance: {fileID: 579153298681008189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &579153298886148946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580543585063534765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4ad1766396e614197353d819629f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 105159a9-b428-4d0b-b397-0cae33d412ec
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: b07ceaec-efc8-42cc-b258-646f54a43f68
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 7d7bbf48-d9f5-4f5c-8c54-2741b93164db
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 63dee15e-1945-4ddf-9626-96cfe4f5f8a4
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 1b7dd6cd-4dcb-4f56-832f-fb38dd7e50aa
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: faf34adf-5790-4e79-893e-a1b98311318e
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: 
+      m_Id: 8a2e2fad-2ae5-4fd0-bc44-2c4b5eca578d
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 0
+    m_Flags: 0
+  fire:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8234ba77-e136-4225-a39b-8b47007059fe
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: dc5d3222-6eff-4879-8728-a8f3a6115eeb
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire
+      m_Flags: 0
+    m_Flags: 0

@@ -6,53 +6,47 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-    //PARAMETERS
-    [SerializeField] InputAction movement;
-    [SerializeField] InputAction fire;
+    //PARAMETERS    
     [SerializeField] float movementSpeed = 15f;
     [SerializeField] float xRange = 13f;
     [SerializeField] float yRange = 8f;
+    [SerializeField] GameObject[] lasers;
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -15f;
+    //PROPERTIES
+    public float HorizontalThrow
+    {
+        get { return horizontalThrow; }
+        set { horizontalThrow = value; }
+    }
+    public float VerticalThrow
+    {
+        get { return verticalThrow; }
+        set { verticalThrow = value; }
+    }
 
     //CACHE - references for readability or speed
     //STATE - private instance (member) variables
-    private float horizontalThrow, verticalThrow;
+    private float horizontalThrow, verticalThrow, newXPos, newYPos, xOffset, yOffset, clampedXPos, clampedYPos;
 
 
     //PUBLIC METHOD    
-    void FixedUpdate()
+    
+    public void ProcessShooting(float fireInput)
     {
-        InputHandler();
-    }
-    //PRIVATE METHOD
-    private void InputHandler()
-    {
-        horizontalThrow = movement.ReadValue<Vector2>().x;
-        verticalThrow = movement.ReadValue<Vector2>().y;
-
-        MovePlayerShip(horizontalThrow, verticalThrow);
-        RotatePlayerShip(horizontalThrow, verticalThrow);
-        ProcessShooting();
-        //horizontalThrow = Input.GetAxis("Horizontal");
-        //verticalThrow = Input.GetAxis("Vertical");
-    }
-
-    private void ProcessShooting()
-    {
-        if (fire.ReadValue<float>() > 0.5)
+        if (fireInput > 0.5)
         {
-            Debug.Log("Shooting");
+            ActivateLasers();
         }
         else
         {
-            Debug.Log("Stop Shooting");
+            DeactivateLasers();
         }
-    }
+    }    
 
-    private void RotatePlayerShip(float horizontalThrow, float verticalThrow)
+    public void RotatePlayerShip(float horizontalThrow, float verticalThrow)
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControlThrow = verticalThrow * controlPitchFactor;
@@ -66,10 +60,8 @@ public class PlayerControls : MonoBehaviour
 
     }
 
-    private void MovePlayerShip(float horizontalThrow, float verticalThrow)
+    public void MovePlayerShip(float horizontalThrow, float verticalThrow)
     {
-        float newXPos, newYPos, xOffset, yOffset, clampedXPos, clampedYPos;
-
         xOffset = horizontalThrow * Time.deltaTime * movementSpeed;
         yOffset = verticalThrow * Time.deltaTime * movementSpeed;
 
@@ -82,14 +74,22 @@ public class PlayerControls : MonoBehaviour
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
 
-    private void OnEnable()
+
+    //PRIVATE METHOD    
+    private void DeactivateLasers()
     {
-        movement.Enable();
-        fire.Enable();
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        }
     }
-    private void OnDisable()
+
+    private void ActivateLasers()
     {
-        movement.Disable();
-        fire.Disable();
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(true);
+        }
     }
+
 }
