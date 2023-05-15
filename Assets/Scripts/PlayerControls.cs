@@ -38,11 +38,11 @@ public class PlayerControls : MonoBehaviour
     {
         if (fireInput > 0.5)
         {
-            ActivateLasers();
+            SetLaserActive(true);
         }
         else
         {
-            DeactivateLasers();
+            SetLaserActive(false);
         }
     }    
 
@@ -76,20 +76,17 @@ public class PlayerControls : MonoBehaviour
 
 
     //PRIVATE METHOD    
-    private void DeactivateLasers()
+    private void SetLaserActive(bool isActive)
     {
         foreach (GameObject laser in lasers)
         {
-            laser.SetActive(false);
+            var emission = laser.GetComponent<ParticleSystem>().emission;
+            emission.enabled = isActive;
+
+            
         }
     }
 
-    private void ActivateLasers()
-    {
-        foreach (GameObject laser in lasers)
-        {
-            laser.SetActive(true);
-        }
-    }
+   
 
 }
