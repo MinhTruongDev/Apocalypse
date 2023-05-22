@@ -82,8 +82,6 @@ public class PlayerControls : MonoBehaviour
         {
             var emission = laser.GetComponent<ParticleSystem>().emission;
             emission.enabled = isActive;
-
-            
         }
     }
 
